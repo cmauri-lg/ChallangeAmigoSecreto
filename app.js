@@ -24,6 +24,20 @@ let amigos = [];
     actualizarLista();
 }
 
+// Función para actualizar la lista de amigos en el HTML
+function actualizarLista() {
+    // Obtener el elemento de la lista en el DOM
+    const listaHTML = document.getElementById("listaAmigos");
+
+    // Limpiar la lista existente
+    listaHTML.innerHTML = "";
+
+    // Iterar sobre el array de amigos y agregar cada uno como un elemento <li>
+    for (let i = 0; i < amigos.length; i++) {
+        const elementoLista = `<li>${amigos[i]}</li>`;
+        listaHTML.innerHTML += elementoLista;
+    }
+}
 
 
 
